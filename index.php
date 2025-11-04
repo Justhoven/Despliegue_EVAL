@@ -87,7 +87,7 @@ $remaining = $MAX_ATTEMPTS - count($_SESSION['attempts']);
   <?php else: ?>
     <div class="result">
       <?php if ($won):
-        $nuevaURL = '/resultado.php';
+        $nuevaURL = 'resultado.php';
          header("Location: . $nuevaURL");
       else: ?>
         <h3>❌ Sin intentos. El número era <?= htmlspecialchars($secret) ?>.</h3>
