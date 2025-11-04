@@ -79,6 +79,10 @@ $remaining = $MAX_ATTEMPTS - count($_SESSION['attempts']);
     color: red;
   }
 
+  p {
+    color: #3d3d68;
+  }
+
 </style>
 </head>
 <body>
