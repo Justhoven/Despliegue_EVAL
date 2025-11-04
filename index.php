@@ -86,9 +86,10 @@ $remaining = $MAX_ATTEMPTS - count($_SESSION['attempts']);
     <p>Intentos restantes: <?= $remaining ?></p>
   <?php else: ?>
     <div class="result">
-      <?php if ($won): ?>
-        <h3>🎉 ¡Correcto! El número era <?= htmlspecialchars($secret) ?>.</h3>
-      <?php else: ?>
+      <?php if ($won):
+        $nuevaURL = '/resultado.php';
+         header("Location: . $nuevaURL");
+      else: ?>
         <h3>❌ Sin intentos. El número era <?= htmlspecialchars($secret) ?>.</h3>
       <?php endif; ?>
       <p><a href="?reset=1"><button>Jugar otra vez</button></a></p>
